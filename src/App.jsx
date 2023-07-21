@@ -3,9 +3,13 @@ import { Hero } from './features/home/components'
 
 const App = () => {
 	return (
-		<>
-			<div>Chevalier | Software Engineer</div>
-		</>
+		<BrowserRouter>
+			<div className="relative z-0 bg-primary">
+				<header className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
+					<Hero />
+				</header>
+			</div>
+		</BrowserRouter>
 	)
 }
 
