@@ -126,6 +126,14 @@
   transform: translateZ(0);
 }
 
+/* moved inline styles from canvas loader: */
+.canvas-loader-progress {
+  font-size: 14;
+	color: '#f1f1f1';
+	font-weight: 800;
+	margin-top: 40;
+}
+
 @keyframes mulShdSpin {
   0%,
   100% {

@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { styles } from '../../styles'
-import { navLinks } from '../constants'
-import { logo, menu, close } from '../assets'
+import { styles } from '/styles.js'
+import { navLinks } from '/constants'
+import { logo, menu, close } from '/assets'
 
 const Navbar = () => {
 	const [active, setActive] = useState('')
@@ -38,17 +38,17 @@ const Navbar = () => {
 					{/*  this will be used again on mobile menu, so best to refactor this to keep code DRY */}
 					<ul className="list-none hidden sm:flex flex-row gap-10">
 						{navLinks.map(Link => (
-							<li
+							<Link
 								key={Link.id}
 								className={`${
 									active === Link.title
 										? 'text-white'
 										: 'text-secondary'
 								} hover:text-white text-[18px] font-medium cursor-pointer`}
-								onClick={() => setActiveNavbar(Link.title)}
+								onClick={() => setActive(Link.title)}
 							>
 								<a href={`#${Link.id}`}>{Link.title}</a>
-							</li>
+							</Link>
 						))}
 					</ul>
 					<div className="sm:hidden flex flex-1 justify-end items-center">
@@ -68,7 +68,7 @@ const Navbar = () => {
 							We also add to onClick: setToggle(!toggle)  */}
 							<ul className="list-none flex flex-col gap-4 justify-end items-start">
 								{navLinks.map(Link => (
-									<li
+									<Link
 										key={Link.id}
 										className={`${
 											active === Link.title
@@ -76,12 +76,12 @@ const Navbar = () => {
 												: 'text-secondary'
 										} font-poppins font-medium cursor-pointer text-[16px]`}
 										onClick={() => {
-											setToggle(!toggleNavbar)
+											setToggleNavbar(!toggleNavbar)
 											setActive(Link.title)
 										}}
 									>
 										<a href={`#${Link.id}`}>{Link.title}</a>
-									</li>
+									</Link>
 								))}
 							</ul>
 						</div>
@@ -92,4 +92,4 @@ const Navbar = () => {
 	)
 }
 
-export default Navbar
+export { Navbar }
