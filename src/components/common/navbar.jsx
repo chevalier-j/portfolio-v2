@@ -1,12 +1,16 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { styles } from '/styles.js'
-import { navLinks } from '/constants'
-import { logo, menu, close } from '/assets'
+import { styles } from '@styles'
+import { navLinks } from '@constants'
+import { logo, menu, close } from '@assets'
 
 const Navbar = () => {
 	const [active, setActive] = useState('')
 	const [toggleNavbar, setToggleNavbar] = useState(false)
+
+	const toggleMobileMenu = () => {
+		setToggleNavbar(prevToggle => !prevToggle)
+	}
 
 	return (
 		<>
@@ -47,21 +51,22 @@ const Navbar = () => {
 								} hover:text-white text-[18px] font-medium cursor-pointer`}
 								onClick={() => setActive(Link.title)}
 							>
+								{/* remove the <a> and put {`#${Link.id}`} inside the Link element, like this: to={`#${link.id}`} */}
 								<a href={`#${Link.id}`}>{Link.title}</a>
 							</Link>
 						))}
 					</ul>
 					<div className="sm:hidden flex flex-1 justify-end items-center">
-						<img
-							src={toggle ? close : menu}
-							alt="menu icon"
+						<button
 							className="w-[28px] h-[28px] object-contain cursor-pointer"
-							onClick={() => setToggleNavbar(!toggleNavbar)}
+							onClick={toggleMobileMenu}
+							aria-label={toggleNavbar ? 'Close Menu' : 'Open Menu'}
 						/>
-						<div
+						<img
 							className={`${
 								!toggleNavbar ? 'hidden' : 'flex'
 							} p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+							alt="menu icon"
 						>
 							{/* reminder to refactor this to keep the code DRY. See comment above. However there are a few differences between the desktop menu and mobile menu, namely: mobile it's flex by default instead of hidden, sm:flex is gone, and instead of flex-row  and gap-10, it has justify-end items-start flex-col gap-4 
 							There are also changes in the li, where mobile has font-poppins font-medium cursor-pointer text-[16px]
@@ -84,7 +89,7 @@ const Navbar = () => {
 									</Link>
 								))}
 							</ul>
-						</div>
+						</img>
 					</div>
 				</div>
 			</nav>

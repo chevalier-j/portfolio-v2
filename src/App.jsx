@@ -1,6 +1,6 @@
 import { BrowserRouter } from 'react-router-dom'
+import { Navbar } from '@common'
 import { Hero } from './features/home/components'
-import { Navbar } from './components/common'
 
 const App = () => {
 	return (

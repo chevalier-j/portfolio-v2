@@ -1,7 +1,7 @@
 import { Suspense, useEffect, useState } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls, Preload, useGLTF } from '@react-three/drei'
-import { CanvasLoader } from '../../../../components/common/loader'
+import { CanvasLoader } from '@common/loader'
 
 export const Computers = ({ isMobile }) => {
 	// used to import the 3D model of the computer:

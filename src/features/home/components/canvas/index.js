@@ -1,3 +1,2 @@
-import ComputersCanvas from './computers'
-
+import { ComputersCanvas } from './computers'
 export { ComputersCanvas }
