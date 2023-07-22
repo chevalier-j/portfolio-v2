@@ -42,6 +42,13 @@ export const navLinks = [
 	},
 ]
 
+// export const hero = [
+// 	{
+// 		title: "Hi, I'm Alexander",
+// 		subtitle: 'Software Engineer',
+// 	},
+// ]
+
 const services = [
 	{
 		title: 'Web Developer',

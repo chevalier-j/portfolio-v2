@@ -4,7 +4,7 @@ import { Canvas } from '@react-three/fiber'
 import { OrbitControls, Preload, useGLTF } from '@react-three/drei'
 import { CanvasLoader } from '@common/loader'
 
-export const Computers = ({ isMobile }) => {
+const Computer = ({ isMobile }) => {
 	// used to import the 3D model of the computer:
 	const computer = useGLTF('./desktop_pc/scene.gltf')
 	return (
@@ -30,8 +30,9 @@ export const Computers = ({ isMobile }) => {
 		</mesh>
 	)
 }
+export { Computer }
 
-const ComputersCanvas = () => {
+const ComputerCanvas = () => {
 	const [isMobile, setIsMobile] = useState(false)
 
 	useEffect(() => {
@@ -65,11 +66,11 @@ const ComputersCanvas = () => {
 					minPolarAngle={Math.PI / 2}
 					maxPolarAngle={Math.PI / 2}
 				/>
-				<Computers isMobile={isMobile} />
+				<Computer isMobile={isMobile} />
 			</Suspense>
 			<Preload all />
 		</Canvas>
 	)
 }
 
-export { ComputersCanvas }
+export { ComputerCanvas }

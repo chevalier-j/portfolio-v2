@@ -12,6 +12,8 @@ export default defineConfig({
 			'@styles': '/src/styles.js',
 			'@constants': '/src/constants',
 			'@common': '/src/components/common',
+			'@canvas': '/src/components/canvas',
+			'@home': '/src/components/home',
 		},
 	},
 })
