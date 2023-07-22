@@ -7,8 +7,9 @@ export default defineConfig({
 	plugins: [react()],
 	resolve: {
 		alias: {
+			'@test': '/src/components/common/test',
 			'@assets': '/src/assets',
-			'@styles': '/src/styles',
+			'@styles': '/src/styles.js',
 			'@constants': '/src/constants',
 			'@common': '/src/components/common',
 		},

@@ -1,4 +1,4 @@
-// tailwind utility styles
+// tailwind utility styles (variables)
 
 const styles = {
 	paddingX: 'sm:px-16 px-6',
