@@ -9,9 +9,7 @@
    cd portfolio-v2
    npm create vite@latest ./ -- --template react
 
-   npm install @react-three/fiber @react-three/drei maath
-   @react-three/postprocessing
-   react-parallax-tilt react-vertical-timeline-component @emailjs/browser framer-motion react-router-dom
+   npm install three @react-three/fiber @react-three/drei maath @react-three/postprocessing react-parallax-tilt react-vertical-timeline-component @emailjs/browser framer-motion react-router-dom
    npm install three
 
 git init

@@ -1,3 +1,4 @@
+// refactor this component to make it reusable as a general loader
 import { Html, useProgress } from '@react-three/drei'
 
 export const CanvasLoader = () => {
