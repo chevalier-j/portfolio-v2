@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import { styles } from '@styles'
 import { services } from '@constants'
 import { fadeIn, textVariant } from '@utils/motion'
-import { SectionWrapper } from '@utils/section'
+import { SectionWrapper } from '@utils'
 
 const ServiceCard = ({ title, icon, index }) => {
 	return (
@@ -64,4 +64,5 @@ const About = () => {
 	)
 }
 
-export { About }
+const WrappedAbout = SectionWrapper(About, 'about')
+export { WrappedAbout as About }
