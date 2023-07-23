@@ -1,12 +1,9 @@
-/* eslint-disable react/no-unknown-property */
 import { Suspense, useEffect, useState } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls, Preload, useGLTF } from '@react-three/drei'
 import { CanvasLoader } from '@common/loader'
 
-const Computer = ({ isMobile }) => {
-	// used to import the 3D model of the computer:
-	const computer = useGLTF('./desktop_pc/scene.gltf')
+const Computer = ({ isMobile, computerModel }) => {
 	return (
 		<mesh>
 			{/* lights start */}
@@ -22,18 +19,18 @@ const Computer = ({ isMobile }) => {
 			/>
 			{/* lights end */}
 			<primitive
-				object={computer.scene}
+				object={computerModel.scene}
 				scale={isMobile ? 0.35 : 0.75}
-				position={isMobile ? [0, -3, -2.2] : [0, -3.25, -1.5]}
+				position={isMobile ? [0, -3, -0.7] : [0, -3.25, -1.5]}
 				rotation={[-0.01, -0.2, -0.1]}
 			/>
 		</mesh>
 	)
 }
-export { Computer }
 
 const ComputerCanvas = () => {
 	const [isMobile, setIsMobile] = useState(false)
+	const computerModel = useGLTF('./desktop_pc/scene.gltf') // Move useGLTF here to load the model once
 
 	useEffect(() => {
 		// Adding listener to detect changes in screen size
@@ -63,10 +60,15 @@ const ComputerCanvas = () => {
 			<Suspense fallback={<CanvasLoader />}>
 				<OrbitControls
 					enableZoom={false}
+					// vertical rotation:
 					minPolarAngle={Math.PI / 2}
 					maxPolarAngle={Math.PI / 2}
+					// horizontal rotation:
+					// minAzimuthAngle={-Math.PI / -8}
+					// maxAzimuthAngle={Math.PI / 1.3}
 				/>
-				<Computer isMobile={isMobile} />
+				{/* Pass the loaded model as a prop to the Computer component */}
+				<Computer isMobile={isMobile} computerModel={computerModel} />
 			</Suspense>
 			<Preload all />
 		</Canvas>
