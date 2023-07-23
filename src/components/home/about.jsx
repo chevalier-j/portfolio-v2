@@ -1,18 +1,26 @@
 /* eslint-disable react/no-unknown-property */
 import Tilt from 'react-parallax-tilt'
-import { delay, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { styles } from '@styles'
 import { services } from '@constants'
 import { fadeIn, textVariant } from '@utils/motion'
+import { SectionWrapper } from '@utils/section'
 
 const ServiceCard = ({ title, icon, index }) => {
 	return (
+		/* tilt parallax effect */
 		<Tilt className="xs:w-[250px] w-full">
+			{/* motion effects */}
 			<motion.div
+				/* using the index * 0.5, each card fades in one after the other */
 				variants={fadeIn('right', 'spring', 0.5 * index, 0.75)}
+				// initial="hidden"
+				// animate="show"
+				// exit="hidden"
 				className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
 			>
 				<div
+					/* tilt options: */
 					options={{ max: 45, scale: 1, speed: 450 }}
 					className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex flex-col justify-evenly items-center"
 				>
