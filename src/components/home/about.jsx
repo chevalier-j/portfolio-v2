@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 import Tilt from 'react-parallax-tilt'
 import { delay, motion } from 'framer-motion'
 import { styles } from '@styles'
