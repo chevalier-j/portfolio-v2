@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unknown-property */
 import { Suspense, useEffect, useState } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
+// import { EffectComposer, Bloom } from '@react-three/postprocessing'
 import { OrbitControls, Preload, useGLTF } from '@react-three/drei'
 import { CanvasLoader } from '@common/loader'
 
@@ -74,6 +75,14 @@ const ComputerCanvas = () => {
 			camera={{ position: [20, 3, 5], fov: 25 }}
 			gl={{ preserveDrawingBuffer: true }}
 		>
+			{/* <EffectComposer multisampling={0} disableNormalPass={true}>
+				<Bloom
+					luminanceThreshold={0}
+					luminanceSmoothing={0.9}
+					height={300}
+					opacity={3}
+				/>
+			</EffectComposer> */}
 			<Suspense fallback={<CanvasLoader />}>
 				<OrbitControls
 					enableZoom={false}
