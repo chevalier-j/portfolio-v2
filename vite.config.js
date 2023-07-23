@@ -11,6 +11,7 @@ export default defineConfig({
 			'@assets': '/src/assets',
 			'@styles': '/src/styles.js',
 			'@constants': '/src/constants',
+			'@utils': '/src/utils',
 			'@common': '/src/components/common',
 			'@canvas': '/src/components/canvas',
 			'@home': '/src/components/home',
