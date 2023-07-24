@@ -4,16 +4,10 @@ import {
 } from 'react-vertical-timeline-component'
 import { motion } from 'framer-motion'
 import 'react-vertical-timeline-component/style.min.css'
-import { styles } from '../../styles'
-import { experiences } from '../../constants'
-import { SectionWrapper } from '../../hoc'
-import { textVariant } from '../../utils/motion'
-
-const ExperienceCard = ({ experience }) => (
-	<VerticalTimelineElement
-
-	</VerticalTimelineElement>
-)
+import { styles } from '@styles'
+import { experiences } from '@constants'
+import { SectionWrapper } from '@hoc'
+import { textVariant } from '@utils/motion'
 
 const Experience = () => {
 	return (
@@ -22,7 +16,7 @@ const Experience = () => {
 				<p className={styles.sectionSubText}>What I've done so far</p>
 				<h2 className={styles.sectionHeadText}>Work Experience</h2>
 			</motion.div>
-			<div className='mt-20 flex flex-col'>
+			<div className="mt-20 flex flex-col">
 				<VerticalTimeline>
 					{experiences.map((experience, index) => (
 						<ExperienceCard key={index} experience={experience} />
@@ -33,4 +27,5 @@ const Experience = () => {
 	)
 }
 
-export default SectionWrapper(Experience, 'work')
+const WrappedExperience = SectionWrapper(Experience, 'experience')
+export { WrappedExperience as Experience }
