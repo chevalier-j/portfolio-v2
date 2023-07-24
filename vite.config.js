@@ -15,6 +15,7 @@ export default defineConfig({
 			'@common': '/src/components/common',
 			'@canvas': '/src/components/canvas',
 			'@home': '/src/components/home',
+			'@public:': '/public',
 		},
 	},
 })

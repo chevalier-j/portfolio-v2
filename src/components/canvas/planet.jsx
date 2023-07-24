@@ -1,13 +1,16 @@
+/* eslint-disable react/no-unknown-property */
 import { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls, Preload, useGLTF } from '@react-three/drei'
 import { CanvasLoader } from '@common/loader'
 
-const Planet = () => {
-	return <div></div>
+const Planet = ({ model }) => {
+	return <primitive object={model.scene} />
 }
 
 const PlanetCanvas = () => {
+	const model = useGLTF('./src/assets/models/planet/scene.gltf')
+
 	return (
 		<Canvas
 			shadows
@@ -22,8 +25,9 @@ const PlanetCanvas = () => {
 					minPolarAngle={Math.PI / 2}
 					maxPolarAngle={Math.PI / 2}
 				/>
-				{/* <Planet /> */}
+				<Planet model={model} />
 			</Suspense>
+			<Preload all />
 		</Canvas>
 	)
 }

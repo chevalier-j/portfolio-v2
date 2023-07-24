@@ -48,7 +48,7 @@ const Computer = ({ isMobile, computerModel }) => {
 
 const ComputerCanvas = () => {
 	const [isMobile, setIsMobile] = useState(false)
-	const computerModel = useGLTF('./desktop_pc/scene.gltf')
+	const computerModel = useGLTF('./src/assets/models/desktop_pc/scene.gltf')
 
 	useEffect(() => {
 		// Adding listener to detect changes in screen size
