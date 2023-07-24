@@ -85,6 +85,7 @@ const ComputerCanvas = () => {
 			</EffectComposer> */}
 			<Suspense fallback={<CanvasLoader />}>
 				<OrbitControls
+					// autoRotate
 					enableZoom={false}
 					// vertical rotation:
 					minPolarAngle={Math.PI / 2}

@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { styles } from '@styles'
 import { ComputerCanvas } from '@canvas/computer'
+// can i use <OrbitControls autoRotate /> on the computer canvas instead of what i did below?
 
 const Hero = () => {
 	return (
