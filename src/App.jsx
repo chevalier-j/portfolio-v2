@@ -2,6 +2,7 @@ import { BrowserRouter } from 'react-router-dom'
 import { Hero } from '@home/hero'
 import { About } from '@home/about'
 import { Experience } from '@home/experience'
+import { Projects } from '@home/projects'
 import { Navbar } from '@common/navbar'
 
 const App = () => {
@@ -13,6 +14,7 @@ const App = () => {
 					<Hero />
 					<About />
 					<Experience />
+					<Projects />
 				</header>
 			</div>
 		</BrowserRouter>
