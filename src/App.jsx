@@ -3,6 +3,7 @@ import { Hero } from '@home/hero'
 import { About } from '@home/about'
 import { Experience } from '@home/experience'
 import { Projects } from '@home/projects'
+import { Contact } from '@home/contact'
 import { Navbar } from '@common/navbar'
 
 const App = () => {
@@ -15,6 +16,7 @@ const App = () => {
 					<About />
 					<Experience />
 					<Projects />
+					<Contact />
 				</header>
 			</div>
 		</BrowserRouter>
