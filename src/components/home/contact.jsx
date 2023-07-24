@@ -28,16 +28,16 @@ const Contact = () => {
 				>
 					<label htmlFor="name" className="flex flex-col">
 						<span className="text-white font-medium mb-4">Your name</span>
+						<input
+							id="name"
+							type="text"
+							name="name"
+							value={form.name}
+							onChange={handleChange}
+							placeholder="What's your name?"
+							className="bg-tertiary py-4 px-6 placeholder:text-secondary test-white rounded-lg outlined-none border-none font-medium"
+						/>
 					</label>
-					<input
-						id="name"
-						type="text"
-						name="name"
-						value={form.name}
-						onChange={handleChange}
-						placeholder="What's your name?"
-						className="bg-tertiary py-4 px-6 placeholder:text-secondary test-white rounded-lg outlined-none border-none font-medium"
-					/>
 				</form>
 			</motion.div>
 		</div>
