@@ -1,3 +1,7 @@
+/* Bugs:
+	ServiceCards are not aligned properly in small screens.
+	There a "jumps" when shrinking / expanding the window.
+*/
 /* eslint-disable react/no-unknown-property */
 import Tilt from 'react-parallax-tilt'
 import { motion } from 'framer-motion'
