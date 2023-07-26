@@ -1,89 +1,166 @@
 import { useState, useRef } from 'react'
 import { motion } from 'framer-motion'
-import emailjs from '@emailjs/browser'
+import { send } from '@emailjs/browser'
 import { styles } from '@styles'
 import { PlanetCanvas } from '@canvas/planet'
 import { slideIn } from '@utils/motion'
 import { SectionWrapper } from '@utils'
 
 const Contact = () => {
-	const [form, setForm] = useState({ name: '', email: '', message: '' })
 	const formRef = useRef()
+	const [form, setForm] = useState({ name: '', email: '', message: '' })
 	const [loading, setLoading] = useState(false)
 
-	const handleChange = e => {}
-	const handleSubmit = e => {}
+	const handleFormChange = e => {
+		const { name, value } = e.target
+
+		setForm({ ...form, [name]: value })
+	}
+
+	const emailRegex = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/
+
+	const handleFormSubmit = async e => {
+		e.preventDefault()
+
+		// form validation start
+		if (
+			form.name.trim() === '' ||
+			form.email.trim() === '' ||
+			form.message.trim() === ''
+		) {
+			alert('Please fill in all the fields.')
+			return
+		}
+
+		if (!emailRegex.test(form.email)) {
+			alert('Please provide a valid email address.')
+			return
+		}
+
+		if (form.name.length > 50 || form.message.length > 500) {
+			alert(
+				'Name should be less than 50 and message less than 500 characters.'
+			)
+			return
+		}
+		// form validation end, therefore continue with...
+
+		try {
+			// This sets loading to true, which could be used to show a loading spinner or disable the form submit button
+			setLoading(true)
+			// This makes a request to the emailjs service to send an email
+			await send(
+				'service_vnjoh7w',
+				'template_a9io3ty',
+				{
+					from_name: form.name,
+					to_name: 'Alex',
+					from_email: form.email,
+					to_email: 'adelgibert@gmail.com',
+					message: form.message,
+				},
+				'RYXXr0rTV02WKnvRj'
+			)
+			setLoading(false)
+			alert('Thanks! Will get back to you ASAP :)')
+			setForm({ name: '', email: '', message: '' })
+		} catch (error) {
+			setLoading(false)
+			console.log(error)
+			alert('Ouch! Something went wrong :(')
+		}
+	}
+
 	return (
-		<div className="xl:mt-12 xl:flex-row flex flex-col-reverse gap-10 overflow-hidden">
+		<div
+			className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
+		>
 			<motion.div
 				variants={slideIn('left', 'tween', 0.2, 1)}
-				className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
+				className={`flex-[0.75] bg-black-100 p-8 rounded-2xl`}
 			>
-				<p className={styles.sectionSubText}>Get in touch</p>
-				<h2 className={styles.sectionHeadText}>Contact.</h2>
+				<p className={`${styles.sectionSubText}`}>Get in touch</p>
+				<h2 className={`${styles.sectionHeadText}`}>Contact.</h2>
 				<form
 					ref={formRef}
-					onSubmit={handleSubmit}
-					className="mt-12 flex flex-col gap-8"
+					onSubmit={handleFormSubmit}
+					className={`mt-12 flex flex-col gap-8`}
 				>
 					{/* form name: */}
-					<label htmlFor="name" className="flex flex-col">
-						<span className="text-white font-medium mb-4">Your name</span>
+					<label htmlFor="name" className={`flex flex-col`}>
+						<span className={`text-white font-medium mb-4`}>
+							Your name
+						</span>
 						<input
+							required
 							id="name"
+							maxLength="35"
 							type="text"
 							name="name"
 							value={form.name}
-							onChange={handleChange}
+							onChange={handleFormChange}
 							placeholder="What's your name?"
-							className="bg-tertiary py-4 px-6 placeholder:text-secondary test-white rounded-lg outlined-none border-none font-medium"
+							className={`bg-tertiary py-4 px-6 placeholder:text-secondary 
+							text-white rounded-lg outline-none border-none font-medium 
+							${styles.focusHighlight}`}
 						/>
 					</label>
 					{/* form email: */}
-					<label htmlFor="name" className="flex flex-col">
-						<span className="text-white font-medium mb-4">
-							Your email
+					<label htmlFor="email" className={`flex flex-col`}>
+						<span className={`text-white font-medium mb-4`}>
+							Your email address
 						</span>
 						<input
 							id="email"
-							type="email"
+							required
+							onChange={handleFormChange}
 							name="email"
+							type="email"
 							value={form.email}
-							onChange={handleChange}
-							placeholder="Your email address so I can reply :)"
-							className="bg-tertiary py-4 px-6 placeholder:text-secondary test-white rounded-lg outlined-none border-none font-medium"
+							placeholder="What's your email address?"
+							className={`bg-tertiary py-4 px-6 placeholder:text-secondary 
+							text-white rounded-lg outline-none border-none font-medium 
+							${styles.focusHighlight} `}
+							maxLength="35"
 						/>
 					</label>
 					{/* form message: */}
-					<label htmlFor="name" className="flex flex-col">
-						<span className="text-white font-medium mb-4">Message</span>
+					<label htmlFor="message" className="flex flex-col">
+						<span className={`text-white font-medium mb-4`}>Message</span>
 						<textarea
+							required
 							rows={7}
 							id="message"
 							type="text"
 							name="message"
 							value={form.message}
-							onChange={handleChange}
+							maxLength="500"
+							onChange={handleFormChange}
 							placeholder="Your message..."
-							className="bg-tertiary py-4 px-6 placeholder:text-secondary test-white rounded-lg outlined-none border-none font-medium"
+							className={`bg-tertiary py-4 px-6 placeholder:text-secondary 
+							text-white rounded-lg outline-none border-none font-medium 
+							${styles.focusHighlight}`}
 						/>
 					</label>
-					<motion.div
+					{/* <motion.div
 						variants={slideIn('left', 'tween', 0.3, 1.5)}
 						// className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
+					> */}
+					<button
+						type="submit"
+						tabIndex="0" // Added tabIndex for focusability
+						className={`bg-tertiary py-3 px-8 rounded-xl outline-none w-fit 
+						text-white font-bold shadow-md shadow-primary focus:bg-myblue 
+						${styles.focusHighlight} `}
 					>
-						<button
-							type="submit"
-							className="bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary"
-						>
-							{loading ? 'Sending...' : 'Send'}
-						</button>
-					</motion.div>
+						{loading ? 'Sending...' : 'Send'}
+					</button>
+					{/* </motion.div> */}
 				</form>
 			</motion.div>
 			<motion.div
 				variants={slideIn('right', 'tween', 0.2, 1)}
-				className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
+				className={`xl:flex-1 xl:h-auto md:h-[550px] h-[350px]`}
 			>
 				<PlanetCanvas />
 			</motion.div>

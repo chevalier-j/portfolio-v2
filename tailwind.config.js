@@ -49,7 +49,7 @@ export default {
 			},
 			backgroundImage: {
 				// 'hero-pattern': "url('/src/assets/herobg.png')",
-				'hero-pattern': "url('/src/assets/nasa.jpg')",
+				// 'hero-pattern': "url('/src/assets/nasa.jpg')",
 			},
 		},
 	},
