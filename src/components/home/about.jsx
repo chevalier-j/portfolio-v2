@@ -1,3 +1,6 @@
+/*
+ * path: /src/components/home/about.jsx
+ */
 /* Bugs:
 	ServiceCards are not aligned properly in small screens.
 	There a "jumps" when shrinking / expanding the window.

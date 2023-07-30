@@ -1,3 +1,6 @@
+/*
+ * path: /tailwind.config.js
+ */
 /** @type {import('tailwindcss').Config} */
 /* eslint-disable import/no-default-export */
 // module.exports = {

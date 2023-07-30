@@ -1,3 +1,6 @@
+/*
+ * path: /src/components/common/loader.jsx
+ */
 // refactor this component to make it reusable as a general loader
 import { Html, useProgress } from '@react-three/drei'
 

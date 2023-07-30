@@ -1,4 +1,7 @@
-// tailwind utility styles (variables)
+/*
+ * path: /src/styles.js
+ */
+//tailwind utility styles (variables)
 
 const styles = {
 	paddingX: 'sm:px-16 px-6',

@@ -1,3 +1,6 @@
+/*
+ * path: /src/components/home/experience.jsx
+ */
 import {
 	VerticalTimeline,
 	VerticalTimelineElement,

@@ -1,3 +1,6 @@
+/*
+ * path: /src/utils/motion.js
+ */
 // framer motion animations
 
 export const textVariant = delay => {

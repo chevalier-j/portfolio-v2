@@ -1,3 +1,6 @@
+/*
+ * path: /src/constants/index.js
+ */
 /* eslint-disable import/no-relative-parent-imports */
 // for convenience, I'm using this constants file to make easy changes throgout the app
 import {

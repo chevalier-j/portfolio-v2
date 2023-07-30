@@ -1,3 +1,6 @@
+/*
+ * path: /src/components/home/contact.jsx
+ */
 import { useState, useRef } from 'react'
 import { motion } from 'framer-motion'
 import { send } from '@emailjs/browser'

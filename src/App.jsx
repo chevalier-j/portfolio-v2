@@ -1,3 +1,6 @@
+/*
+ * path: /src/app.jsx
+ */
 import { BrowserRouter } from 'react-router-dom'
 import { Hero } from '@home/hero'
 import { About } from '@home/about'
