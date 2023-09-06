@@ -1,4 +1,5 @@
-import logo from './logo.svg'
+// import logo from './logo.svg'
+// import logo from './brand/chevalier-high-resolution-logo-white-on-transparent-background.svg'
 import backend from './backend.png'
 import creator from './creator.png'
 import mobile from './mobile.png'
@@ -6,7 +7,7 @@ import web from './web.png'
 import github from './github.png'
 import menu from './menu.svg'
 import close from './close.svg'
-// tech images
+// tech assets
 import css from './tech/css.png'
 import docker from './tech/docker.png'
 import figma from './tech/figma.png'
@@ -20,18 +21,21 @@ import redux from './tech/redux.png'
 import tailwind from './tech/tailwind.png'
 import typescript from './tech/typescript.png'
 import threejs from './tech/threejs.svg'
-// company logos
+// company assets
 import meta from './company/meta.png'
 import shopify from './company/shopify.png'
 import starbucks from './company/starbucks.png'
 import tesla from './company/tesla.png'
-// project logos
+// project assets
 import carrent from './carrent.png'
 import jobit from './jobit.png'
 import tripguide from './tripguide.png'
+// experience assets
+import c from './brand/chevalier-website-favicon-white.png'
 
 export {
-	logo,
+	// logo,
+	c,
 	backend,
 	creator,
 	mobile,
