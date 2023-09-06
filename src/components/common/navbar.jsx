@@ -25,11 +25,11 @@ const Navbar = () => {
 						window.scrollTo(0, 0)
 					}}
 				>
-					<img
+					{/* <img
 						src={logo}
 						alt="Chevalier's logo"
 						className="w-9 h-9 object-contain"
-					/>
+					/> */}
 					<p className="flex text-white text-[18px] font-bold cursor-pointer bg-red-700">
 						Chevalier&nbsp;
 						<span className="sm:block hidden bg-gray-700">
