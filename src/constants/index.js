@@ -20,10 +20,10 @@ import {
 	git,
 	figma,
 	docker,
-	meta,
-	starbucks,
+	// meta,
+	// starbucks,
 	tesla,
-	shopify,
+	// shopify,
 	carrent,
 	jobit,
 	tripguide,
@@ -58,7 +58,7 @@ const services = [
 		icon: web,
 	},
 	{
-		title: 'React Native Developer',
+		title: 'iOS Mobile Developer',
 		icon: mobile,
 	},
 	{
@@ -128,21 +128,8 @@ const technologies = [
 
 const experiences = [
 	{
-		title: 'React.js Developer',
-		company_name: 'Starbucks',
-		icon: starbucks,
-		iconBg: '#383E56',
-		date: 'March 2020 - April 2021',
-		points: [
-			'Developing and maintaining web applications using React.js and other related technologies.',
-			'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-			'Implementing responsive design and ensuring cross-browser compatibility.',
-			'Participating in code reviews and providing constructive feedback to other developers.',
-		],
-	},
-	{
-		title: 'React Native Developer',
-		company_name: 'Tesla',
+		title: 'Web Developer',
+		company_name: 'B',
 		icon: tesla,
 		iconBg: '#E6DEDD',
 		date: 'Jan 2021 - Feb 2022',
@@ -155,8 +142,8 @@ const experiences = [
 	},
 	{
 		title: 'Web Developer',
-		company_name: 'Shopify',
-		icon: shopify,
+		company_name: 'A',
+		icon: tesla,
 		iconBg: '#383E56',
 		date: 'Jan 2022 - Jan 2023',
 		points: [
@@ -168,15 +155,15 @@ const experiences = [
 	},
 	{
 		title: 'Full stack Developer',
-		company_name: 'Meta',
-		icon: meta,
+		company_name: 'Necta',
+		icon: tesla,
 		iconBg: '#E6DEDD',
-		date: 'Jan 2023 - Present',
+		date: 'Apr 2023 - Present',
 		points: [
-			'Developing and maintaining web applications using React.js and other related technologies.',
-			'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-			'Implementing responsive design and ensuring cross-browser compatibility.',
-			'Participating in code reviews and providing constructive feedback to other developers.',
+			'Led end-to-end development of React.js web applications, ensuring exceptional user experiences and heightened customer satisfaction.',
+			'Collaborated with cross-functional teams, accelerating project delivery and fostering a cooperative work environment.',
+			'Implemented innovative solutions, staying ahead of industry trends and enhancing Necta`s web applications.',
+			'Improved code quality and application stability through rigorous testing and code reviews.',
 		],
 	},
 ]
@@ -210,20 +197,20 @@ const testimonials = [
 
 const projects = [
 	{
-		name: 'Car Rent',
+		name: 'ChatKra',
 		description:
-			'Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.',
+			'Innovative chat application empowering multiple users to connect and communicate seamlessly in real-time. Enjoy an immersive chat experience with stunning UI, effortless message exchanges, and secure data management, fostering efficient and interactive conversations.',
 		tags: [
 			{
 				name: 'react',
 				color: 'blue-text-gradient',
 			},
 			{
-				name: 'mongodb',
+				name: 'chatkra',
 				color: 'green-text-gradient',
 			},
 			{
-				name: 'tailwind',
+				name: 'firebase',
 				color: 'pink-text-gradient',
 			},
 		],
@@ -231,16 +218,16 @@ const projects = [
 		source: 'https://github.com/',
 	},
 	{
-		name: 'Job IT',
+		name: 'Photocomp',
 		description:
-			'Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.',
+			'Introducing a dynamic photography competition platform that enables users to showcase their talent through photo uploads. Participants can actively engage in a fair voting system to rank and select the most captivating images. Enjoy a seamless experience with easy photo submission and real-time updates on top-ranked masterpieces.',
 		tags: [
 			{
-				name: 'react',
+				name: 'php',
 				color: 'blue-text-gradient',
 			},
 			{
-				name: 'restapi',
+				name: 'laravel',
 				color: 'green-text-gradient',
 			},
 			{
@@ -252,20 +239,20 @@ const projects = [
 		source: 'https://github.com/',
 	},
 	{
-		name: 'Trip Guide',
+		name: 'Splitmate',
 		description:
-			'A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.',
+			'Simplifying bill management for iOS users, our app lets you effortlessly split bills among friends. Add the bill amount, number of people, and optional tip percentage. Easily select contacts to send email or text SMS with banking details for quick and hassle-free transfers. Streamlining your group payments, it`s the perfect tool to simplify your social outings.',
 		tags: [
 			{
-				name: 'nextjs',
+				name: 'swift',
 				color: 'blue-text-gradient',
 			},
 			{
-				name: 'supabase',
+				name: 'css',
 				color: 'green-text-gradient',
 			},
 			{
-				name: 'css',
+				name: 'swiftui',
 				color: 'pink-text-gradient',
 			},
 		],
