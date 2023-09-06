@@ -31,7 +31,7 @@ import carrent from './carrent.png'
 import jobit from './jobit.png'
 import tripguide from './tripguide.png'
 // experience assets
-import c from './brand/chevalier-website-favicon-white.png'
+import c from './brand/chevalier-website-favicon-color.png'
 
 export {
 	// logo,

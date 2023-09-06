@@ -28,6 +28,7 @@ import {
 	jobit,
 	tripguide,
 	threejs,
+	c,
 } from '../assets'
 
 export const navLinks = [
@@ -130,7 +131,7 @@ const experiences = [
 	{
 		title: 'Web Developer',
 		company_name: 'B',
-		icon: tesla,
+		icon: c,
 		iconBg: '#E6DEDD',
 		date: 'Jan 2021 - Feb 2022',
 		points: [
@@ -143,7 +144,7 @@ const experiences = [
 	{
 		title: 'Web Developer',
 		company_name: 'A',
-		icon: tesla,
+		icon: c,
 		iconBg: '#383E56',
 		date: 'Jan 2022 - Jan 2023',
 		points: [
@@ -156,7 +157,7 @@ const experiences = [
 	{
 		title: 'Full stack Developer',
 		company_name: 'Necta',
-		icon: tesla,
+		icon: c,
 		iconBg: '#E6DEDD',
 		date: 'Apr 2023 - Present',
 		points: [
@@ -202,7 +203,7 @@ const projects = [
 			'Innovative chat application empowering multiple users to connect and communicate seamlessly in real-time. Enjoy an immersive chat experience with stunning UI, effortless message exchanges, and secure data management, fostering efficient and interactive conversations.',
 		tags: [
 			{
-				name: 'react',
+				name: 'react.js',
 				color: 'blue-text-gradient',
 			},
 			{
@@ -231,7 +232,7 @@ const projects = [
 				color: 'green-text-gradient',
 			},
 			{
-				name: 'scss',
+				name: 'mysql',
 				color: 'pink-text-gradient',
 			},
 		],
@@ -241,7 +242,7 @@ const projects = [
 	{
 		name: 'Splitmate',
 		description:
-			'Simplifying bill management for iOS users, our app lets you effortlessly split bills among friends. Add the bill amount, number of people, and optional tip percentage. Easily select contacts to send email or text SMS with banking details for quick and hassle-free transfers. Streamlining your group payments, it`s the perfect tool to simplify your social outings.',
+			'My app lets you effortlessly split bills among friends. Add the bill amount, number of people, and optional tip percentage. Easily select contacts to send email or text SMS with banking details for quick and hassle-free transfers. Streamlining your group payments, it`s the perfect tool to simplify your social outings.',
 		tags: [
 			{
 				name: 'swift',
