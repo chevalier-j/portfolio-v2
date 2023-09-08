@@ -237,7 +237,7 @@ const projects = [
 			},
 		],
 		image: jobit,
-		source: 'https://github.com/',
+		source: 'https://github.com/gibert-j/laravel_photocomp',
 	},
 	{
 		name: 'Splitmate',
