@@ -29,6 +29,7 @@ import tesla from './company/tesla.png'
 // project assets
 import carrent from './carrent.png'
 import jobit from './jobit.png'
+import photocomp from './projects/photocomp_about.png'
 import tripguide from './tripguide.png'
 // experience assets
 import c from './brand/chevalier-website-favicon-color.png'
@@ -61,6 +62,7 @@ export {
 	starbucks,
 	tesla,
 	carrent,
+	photocomp,
 	jobit,
 	tripguide,
 }

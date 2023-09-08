@@ -25,7 +25,8 @@ import {
 	tesla,
 	// shopify,
 	carrent,
-	jobit,
+	photocomp,
+	// jobit,
 	tripguide,
 	threejs,
 	c,
@@ -94,7 +95,7 @@ const technologies = [
 		icon: reactjs,
 	},
 	{
-		name: 'Redux Toolkit',
+		name: 'Redux',
 		icon: redux,
 	},
 	{
@@ -236,7 +237,7 @@ const projects = [
 				color: 'pink-text-gradient',
 			},
 		],
-		image: jobit,
+		image: photocomp,
 		source: 'https://github.com/gibert-j/laravel_photocomp',
 	},
 	{
