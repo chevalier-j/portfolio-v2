@@ -55,9 +55,9 @@ const Projects = () => {
 	return (
 		<>
 			<motion.div variants={textVariant}>
-				<p className={styles.sectionSubText}>
+				{/* <p className={styles.sectionSubText}>
 					Projects I&apos;ve been involved in
-				</p>
+				</p> */}
 				<h2 className={styles.sectionHeadText}>Projects</h2>
 			</motion.div>
 			<div className="w-full flex">
@@ -65,10 +65,7 @@ const Projects = () => {
 					variants={fadeIn('', '', 0.1, 1)}
 					className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
 				>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit.
-					Architecto voluptates odio minus dignissimos. Distinctio saepe
-					tenetur praesentium voluptatum vel dignissimos necessitatibus in
-					totam adipisci a possimus, eaque dolores dolorum fugiat.
+					{`Here's a snapshot of my work as a software developer, highlighting the practical solutions I've crafted over the years through hands-on experience.`}
 				</motion.p>
 			</div>
 			<div className="mt-20 flex flex-wrap gap-7">
