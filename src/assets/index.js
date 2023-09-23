@@ -8,7 +8,9 @@ import github from './github.png'
 import menu from './menu.svg'
 import close from './close.svg'
 // brand assets
-import c from './brand/chevalier-website-favicon-color.png'
+import c from './brand/chevalier-website-favicon-white.svg'
+// import c_red from './brand/chevalier-website-favicon-color.png'
+import chevalier from './brand/chevalier-logo-black-on-transparent-background.svg'
 // tech assets
 import css from './tech/css.png'
 import docker from './tech/docker.png'
@@ -38,6 +40,7 @@ import tripguide from './tripguide.png'
 
 export {
 	c,
+	chevalier,
 	backend,
 	creator,
 	mobile,

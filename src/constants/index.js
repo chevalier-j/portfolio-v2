@@ -4,6 +4,7 @@
 /* eslint-disable import/no-relative-parent-imports */
 // for convenience, I'm using this constants file to make easy changes throgout the app
 import {
+	chevalier,
 	mobile,
 	backend,
 	creator,
@@ -287,7 +288,7 @@ const projects = [
 				color: 'pink-text-gradient',
 			},
 		],
-		image: tripguide,
+		image: c,
 		source: 'https://github.com/',
 	},
 ]
