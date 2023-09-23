@@ -7,6 +7,8 @@ import web from './web.png'
 import github from './github.png'
 import menu from './menu.svg'
 import close from './close.svg'
+// brand assets
+import c from './brand/chevalier-website-favicon-color.png'
 // tech assets
 import css from './tech/css.png'
 import docker from './tech/docker.png'
@@ -21,7 +23,7 @@ import redux from './tech/redux.png'
 import tailwind from './tech/tailwind.png'
 import typescript from './tech/typescript.png'
 import threejs from './tech/threejs.svg'
-// company assets
+// companies assets
 import meta from './company/meta.png'
 import shopify from './company/shopify.png'
 import starbucks from './company/starbucks.png'
@@ -30,12 +32,11 @@ import tesla from './company/tesla.png'
 import carrent from './carrent.png'
 import jobit from './jobit.png'
 import photocomp from './projects/photocomp_about.png'
+import chatkra from './projects/chatkra_main.png'
 import tripguide from './tripguide.png'
 // experience assets
-import c from './brand/chevalier-website-favicon-color.png'
 
 export {
-	// logo,
 	c,
 	backend,
 	creator,
@@ -63,6 +64,7 @@ export {
 	tesla,
 	carrent,
 	photocomp,
+	chatkra,
 	jobit,
 	tripguide,
 }

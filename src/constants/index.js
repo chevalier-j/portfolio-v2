@@ -26,6 +26,7 @@ import {
 	// shopify,
 	carrent,
 	photocomp,
+	chatkra,
 	// jobit,
 	tripguide,
 	threejs,
@@ -236,7 +237,7 @@ const projects = [
 				color: 'blue-text-gradient',
 			},
 			{
-				name: 'chatkra',
+				name: 'chakra',
 				color: 'green-text-gradient',
 			},
 			{
@@ -244,7 +245,7 @@ const projects = [
 				color: 'pink-text-gradient',
 			},
 		],
-		image: carrent,
+		image: chatkra,
 		source: 'https://github.com/',
 	},
 	{
