@@ -4,7 +4,7 @@
 /* eslint-disable import/no-relative-parent-imports */
 // for convenience, I'm using this constants file to make easy changes throgout the app
 import {
-	chevalier,
+	c,
 	mobile,
 	backend,
 	creator,
@@ -21,17 +21,9 @@ import {
 	git,
 	figma,
 	docker,
-	// meta,
-	// starbucks,
-	tesla,
-	// shopify,
-	carrent,
 	photocomp,
 	chatkra,
-	// jobit,
-	tripguide,
 	threejs,
-	c,
 } from '../assets'
 
 export const navLinks = [

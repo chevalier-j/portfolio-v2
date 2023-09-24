@@ -31,12 +31,10 @@ import shopify from './company/shopify.png'
 import starbucks from './company/starbucks.png'
 import tesla from './company/tesla.png'
 // project assets
-import carrent from './carrent.png'
-import jobit from './jobit.png'
 import photocomp from './projects/photocomp_about.png'
 import chatkra from './projects/chatkra_main.png'
-import tripguide from './tripguide.png'
-// experience assets
+// splitmate currently using c logo as placeholder
+// experience assets (todo)
 
 export {
 	c,
@@ -65,9 +63,6 @@ export {
 	shopify,
 	starbucks,
 	tesla,
-	carrent,
 	photocomp,
 	chatkra,
-	jobit,
-	tripguide,
 }
